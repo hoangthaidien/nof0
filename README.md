@@ -1,4 +1,4 @@
-# NOF0 - 开源的 AI 交易竞技场
+# NOF0 - Open Source AI Trading Arena
 
 <div align="center">
 
@@ -27,77 +27,77 @@
 
 <div align="center">
 
-![前端进度](https://img.shields.io/badge/前端进度-100%25-success?style=flat-square)
-![后端进度](https://img.shields.io/badge/后端进度-70%25-yellow?style=flat-square)
-![AI交易引擎进度](https://img.shields.io/badge/AI交易引擎进度-80%25-yellowgreen?style=flat-square)
+![Frontend Progress](https://img.shields.io/badge/Frontend_Progress-100%25-success?style=flat-square)
+![Backend Progress](https://img.shields.io/badge/Backend_Progress-70%25-yellow?style=flat-square)
+![AI_Engine_Progress](https://img.shields.io/badge/AI_Engine_Progress-80%25-yellowgreen?style=flat-square)
 
 </div>
 
 
-> **开箱即用的 LLM/Agentic Trading 项目**
+> **Out-of-the-box LLM/Agentic Trading Project**
 >
-> 完整复刻 [NOF1.ai](https://nof1.ai) Alpha Arena，让 AI + Crypto 走向大众视野
+> A complete replica of [NOF1.ai](https://nof1.ai) Alpha Arena, bringing AI + Crypto to the masses.
 
-**用真实数据和清晰可视化，回答"哪个模型更会赚"的朴素问题**
+**Using real data and clear visualization to answer the simple question: "Which model earns more?"**
 
-## 项目简介
+## Project Introduction
 
-NOF0 是一个让多个 AI 模型在真实加密货币市场中进行交易竞赛的平台。
+NOF0 is a platform where multiple AI models compete in real-time cryptocurrency markets.
 
-**核心特性**:
+**Core Features**:
 
-- 每个 AI LLM / Agent 从 $10,000 启动资金开始
-- 实时展示每个模型的盈亏表现
-- 完整开源复刻 nof1.ai 的功能
-- 让任何人都能部署自己的 AI 交易竞技场
+- Each AI LLM / Agent starts with $10,000 initial capital.
+- Real-time display of profit and loss (PNL) performance for each model.
+- Complete open-source replica of nof1.ai functionality.
+- Allows anyone to deploy their own AI trading arena.
 
-## 核心理念
+## Core Philosophy
 
-NOF0 不是传统的回测工具，而是一个 **以 Prompt 为中心的交易竞技场**：
+NOF0 is not a traditional backtesting tool, but a **Prompt-Centric Trading Arena**:
 
-- **实盘竞技，不是回测工具** - 用真实盈亏验证策略，持续对抗过度拟合
-- **竞技场 (Arena)，不是单一模型** - 一键部署基础设施，专注 Prompt 策略本身
-- **以 Prompt 为中心** - 让策略同台竞技，用数据回答：哪个模型更会赚？
+- **Live Competition, Not Backtesting** - Verify strategies with real PNL, continuously fighting overfitting.
+- **Arena, Not Single Model** - One-click infrastructure deployment, focusing on the Prompt strategy itself.
+- **Prompt-Centric** - Let strategies compete on the same stage, using data to answer: Which model earns more?
 
-### 核心工作流
+### Core Workflow
 
 ```
-[思考策略] → [撰写Prompt] → [实盘交易] → [PNL排行] → [迭代Prompt]
-     ↑                                                      ↓
-     └──────────────────────────────────────────────────────┘
+[Strategy] -> [Write Prompt] -> [Live Trading] -> [PNL Ranking] -> [Iterate Prompt]
+     ↑                                                                ↓
+     └────────────────────────────────────────────────────────────────┘
 ```
 
-从 $10,000 启动资金开始，实时看板展示所有 Prompt-LLM Agent 的真实表现。
+Starting with $10,000 capital, the real-time dashboard displays the actual performance of all Prompt-LLM Agents.
 
-**[查看完整设计原则](go/docs/principles.md)** - 了解每个理念背后的思考
+**[View Full Design Principles](go/docs/principles.md)** - Understand the thinking behind each concept.
 
-### 开发进度
+### Development Progress
 
-1. 前端：100% 可独立运行，不依赖后端
-2. 后端：70% 核心功能开发中
-3. 执行引擎（基于AI工作流）80% 稳定性提升中
+1. Frontend: 100% independent operation, no backend dependency.
+2. Backend: 70% core functionality in development.
+3. Execution Engine (AI workflow based): 80% stability improvements.
 
-## 项目结构
+## Project Structure
 
 ```
 nof0/
-├── web/          # [前端] Next.js + React + Recharts
-├── go/           # [后端] Go-Zero + REST API
-│   └── pkg/      # 核心业务包
-│       ├── executor/   # AI 数据流与工作流引擎
-│       ├── llm/        # LLM 提供商封装
-│       ├── manager/    # 策略管理器
-│       ├── exchange/   # 交易所接口
-│       ├── market/     # 市场数据
-│       └── prompt/     # Prompt 模板
-└── mcp/          # [MCP数据] MCP浏览器截图、JSON静态数据等
+├── web/          # [Frontend] Next.js + React + Recharts
+├── go/           # [Backend] Go-Zero + REST API
+│   └── pkg/      # Core business packages
+│       ├── executor/   # AI data flow and workflow engine
+│       ├── llm/        # LLM provider wrapper
+│       ├── manager/    # Strategy manager
+│       ├── exchange/   # Exchange interface
+│       ├── market/     # Market data
+│       └── prompt/     # Prompt templates
+└── mcp/          # [MCP Data] MCP browser screenshots, JSON static data, etc.
 ```
 
-## 快速开始
+## Quick Start
 
-### 1. 初始化项目
+### 1. Initialize Project
 
-克隆项目后，配置 Git 自动递归处理子模块：
+Clone the project and configure Git to automatically handle submodules recursively:
 
 ```bash
 git clone <repo>
@@ -105,9 +105,9 @@ cd nof0
 git config submodule.recurse true
 ```
 
-> 此后 `git pull` 会自动更新子模块（包括 `go/etc/prompts/base`），无需手动执行 `git submodule update`
+> After this, `git pull` will automatically update submodules (including `go/etc/prompts/base`), no need to manually run `git submodule update`.
 
-### 2. 启动前端
+### 2. Start Frontend
 
 ```bash
 cd web
@@ -115,76 +115,76 @@ npm install
 npm run dev
 ```
 
-访问 `http://localhost:3000`
+Visit `http://localhost:3000`
 
-**前端核心特性**:
+**Frontend Core Features**:
 
-- 账户总资产曲线
-- 持仓情况
-- 成交纪录
-- 模型对话（Model Chat）
-- 排行榜
-- 模型详情
+- Account Total Assets Curve
+- Positions
+- Trade History
+- Model Chat
+- Leaderboard
+- Model Details
 
-### 3. 启动后端
+### 3. Start Backend
 
-> 尚未开发完毕，欢迎加入tg群获取开发进度通知：https://t.me/nof0_ai
+> Development not yet complete. Join the TG group for progress updates: https://t.me/nof0_ai
 
-## 技术栈
+## Tech Stack
 
-### 前端 (web/)
+### Frontend (web/)
 
-| 类别   | 技术选型                               | 说明              |
-|------|------------------------------------|-----------------|
-| 框架   | Next.js 15 + React 19 + TypeScript | 全栈框架 + 类型安全     |
-| 图表   | Recharts                           | 自定义图例与末端标记      |
-| 状态管理 | Zustand                            | 轻量级状态管理         |
-| 样式系统 | CSS Variables                      | 避免 SSR/CSR 水合差异 |
+| Category | Tech Selection | Description |
+|---|---|---|
+| Framework | Next.js 15 + React 19 + TypeScript | Full-stack framework + Type safety |
+| Charts | Recharts | Custom legends and end markers |
+| State Management | Zustand | Lightweight state management |
+| Styling | CSS Variables | Avoid SSR/CSR hydration mismatches |
 
-**技术亮点**:
+**Tech Highlights**:
 
-- 在 `src/lib/model/meta.ts` 统一配置品牌色与白色版 Logo
-- `globals.css` 使用 CSS 变量驱动主题（`--panel-bg`、`--muted-text`、`--axis-tick` 等）
-- 开发规范：参考 `web/docs/theme.md`，避免 `isDark` 分支判断
+- Brand colors and white version Logo unified in `src/lib/model/meta.ts`.
+- `globals.css` uses CSS variables for theming (`--panel-bg`, `--muted-text`, `--axis-tick`, etc.).
+- Development Standards: Refer to `web/docs/theme.md`, avoid `isDark` branch logic.
 
-### 后端 (go/)
+### Backend (go/)
 
-| 类别   | 技术选型    | 说明          |
-|------|---------|-------------|
-| 框架   | Go-Zero | 微服务框架       |
+| Category | Tech Selection | Description |
+|---|---|---|
+| Framework | Go-Zero | Microservices framework |
 
-> 详细文档见 [go/README.md](go/README.md)
+> Detailed documentation in [go/README.md](go/README.md)
 
-## 数据快照工具
+## Data Snapshot Tool
 
-一键下载 nof1.ai 的上游接口原始数据，离线保存：
+One-click download of raw data from nof1.ai upstream interfaces for offline storage:
 
 ```bash
 cd web
 npm run snapshot:nof1
 ```
 
-**输出说明**:
+**Output Description**:
 
-- **生成目录**: `snapshots/nof1/<ISO时间戳>/*.json` 与 `index.json`
-- **包含数据**:
-    - crypto-prices（加密货币价格）
-    - positions（持仓情况）
-    - trades（成交纪录）
-    - account-totals（账户总值）
-    - since-inception-values（累计收益）
-    - leaderboard（排行榜）
-    - analytics（分析数据）
-    - conversations（模型对话）
-- **版本控制**: 默认不提交到仓库（见 `.gitignore`）
+- **Generated Directory**: `snapshots/nof1/<ISO Timestamp>/*.json` and `index.json`
+- **Included Data**:
+    - crypto-prices
+    - positions
+    - trades
+    - account-totals
+    - since-inception-values
+    - leaderboard
+    - analytics
+    - conversations
+- **Version Control**: Not committed to repository by default (see `.gitignore`).
 
-## 相关资源
+## Related Resources
 
-- [完整文档](https://wquguru.gitbook.io/nof0) - GitBook 在线文档
-- [NOF1 官方网站](https://nof1.ai/) - 原版 Alpha Arena
-- [后端完整文档](go/README.md) - Go 服务详细说明
-- [Go-Zero 框架](https://go-zero.dev/) - 微服务框架文档
+- [Full Documentation](https://wquguru.gitbook.io/nof0) - GitBook Online Docs
+- [NOF1 Official Website](https://nof1.ai/) - Original Alpha Arena
+- [Backend Full Documentation](go/README.md) - Go Service Details
+- [Go-Zero Framework](https://go-zero.dev/) - Microservice Framework Docs
 
-## 许可证
+## License
 
 MIT License
